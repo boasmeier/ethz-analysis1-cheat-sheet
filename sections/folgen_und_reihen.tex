@@ -1,0 +1,203 @@
+\mysection[BurntOrange]{\centering Folgen und Reihen}
+\mysubsection{Folgen}
+\DEF{Folge}{Eine Folge (reeller Zahlen) ist eine Abbildung $a:\mathbb{N}^*\rightarrow\mathbb{R}$. Wir schreiben $a_n$ statt $a(n)$ und bezeichnen eine Folge mit $(a_n)_{n\geq 1}$.}
+
+\LEM{2.1.3}{Sei $(a_n)_{n\geq 1}$. Dann gibt es höchstens ein $l\in\mathbb{R}$ mit der Eigenschaft: $\forall\varepsilon>0$ ist $\{n\in\mathbb{N}|a_n\not\in (l-\varepsilon,l+\varepsilon)\}$ endlich $\Leftrightarrow \forall\varepsilon>0$ ist $\{n\in\mathbb{N}|a_n\in(l-\varepsilon,l+\varepsilon)\}$ unendlich.}
+
+\DEF{Konvergenz und Limes}{$(a_n)_{n\geq 1}$ heisst konvergent $\Leftrightarrow \exists l\in\mathbb{R}:\forall\varepsilon > 0$ ist $\{n\in\mathbb{N}|a_n\not\in (l-\varepsilon,l+\varepsilon)\}$ endlich. Nach Lemma 2.1.3 ist $l$ eindeutig bestimmt; sie wird mit $lim_{n\rightarrow +\infty}a_n$ bezeichnet und nennt sich Grenzwert oder Limes der Folge $(a_n)_{n\geq 1}$.}
+
+\NOTE{2.1.5}{Jede konvergente Folge ist beschränkt.}
+
+\LEM{2.1.6}{Sei $(a_n)_{n\geq 1}$. Folgende Aussagen sind äquivalent:
+
+(1) $(a_n)_{n\geq 1}$ konvergiert gegen $l=lim_{n\rightarrow +\infty}a_n$.
+
+(2) $\forall\varepsilon > 0,\exists N\geq 1: |a_n-l|<\varepsilon$ $\forall n\geq N$.}
+
+\DEF{Divergenz}{$(a_n)_{n\geq 1}$ divergiert wenn...
+
+(1) $(a_n)_{n\geq 1}$ konvergiert gegen $+\infty \Leftrightarrow$ $\forall l\in\mathbb{R},\exists N\in\mathbb{N}: a_n\geq l$ $\forall n\geq N$. Oder
+
+(2) $(a_n)_{n\geq 1}$ konvergiert gegen $-\infty \Leftrightarrow$ $\forall l\in\mathbb{R},\exists N\in\mathbb{N}: a_n\leq l$ $\forall n\geq N$.
+}
+
+\SA{2.1.8 Rechenregeln für Limes}{Seien $(a_n)_{n\geq 1}$ und $(b_n)_{n\geq 1}$ mit $a=lim_{n\rightarrow\infty}a_n, b=lim_{n\rightarrow\infty}b_n$.
+\begin{enumerate}
+    \item $(a_n+b_n)_{n\geq 1}$ konvergiert und $lim_{n\rightarrow\infty}(a_n + b_n)=a+b$.
+    \item $(a_n\cdot b_n)_{n\geq 1}$ konvergiert und $lim_{n\rightarrow\infty}(a_n \cdot b_n)=a\cdot b$.
+    \item $\forall n\geq 1: b_n\not = 0$ und $b\not = 0 \Rightarrow (\frac{a_n}{b_n})_{n\geq 1}$ konvergiert und $lim_{n\rightarrow\infty}(\frac{a_n}{b_n})=\frac{a}{b}$.
+    \item $\exists k\geq 1:a_n\leq b_n$ $\forall n\geq K \Rightarrow a \leq b$.
+\end{enumerate}}
+
+\DEF{Monotonie}{
+(1) $(a_n)_{n\geq 1}$ ist monoton wachsend $\Leftrightarrow$ $\forall n\geq 1: a_n\leq a_{n+1}$.
+
+(2) $(a_n)_{n\geq 1}$ ist monoton fallend $\Leftrightarrow$ $\forall n\geq 1: a_{n+1}\leq a_{n}$.}
+
+\DEF{Sandwichlemma}{Seien $(a_n)_{n\geq 1},(b_n)_{n\geq 1},(c_n)_{n\geq 1}$ reelle Folgen s.d. $(a_n)_{n\geq 1},(b_n)_{n\geq 1}$ konvergieren mit $lim_{n\rightarrow\infty}a_n=lim_{n\rightarrow\infty}b_n$. $\exists N\in\mathbb{N}: a_n\leq c_n\leq b_n$ $\forall n\geq N \Leftrightarrow (c_n)_{n\geq 1}$ konvergiert und $lim_{n\rightarrow\infty}c_n=lim_{n\rightarrow\infty}a_n=lim_{n\rightarrow\infty}b_n$.}
+
+\SA{2.2.2 Weierstrass}{(1) $(a_n)_{n\geq 1}$ monoton wachsend und nach oben beschränkt $\Rightarrow (a_n)_{n\geq 1}$ konvergiert mit $lim_{n\rightarrow\infty}a_n=sup\{a_n|n\geq 1\}$.
+
+(2) $(a_n)_{n\geq 1}$ monoton fallend und nach unten beschränlt $\Rightarrow (a_n)_{n\geq 1}$ konvergiert mit $lim_{n\rightarrow\infty}a_n=inf\{a_n|n\geq 1\}$.}
+
+\LEM{2.2.7 Bernoulli Ungleichung}{$(1+x)^n\geq 1+nx\ \forall n\in\mathbb{N},x>-1$.}
+
+\DEF{Limes Inferior}{Sei $(a_n)_{n\geq 1}$ eine nach unten beschränkte folge. Sei $\forall n\geq 1:b_n=inf\{a_k|k\geq n\}$. Dann $\forall n\geq 1: b_n\leq b_{n+1}$ und $lim\ inf_{n\rightarrow\infty}a_n:=lim_{n\rightarrow\infty}b_n$.}
+
+\DEF{Limes Superior}{Sei $(a_n)_{n\geq 1}$ eine nach oben beschränkte folge. Sei $\forall n\geq 1:c_n=sup\{a_k|k\geq n\}$. Dann $\forall n\geq 1: c_{n+1}\leq c_n$ und $lim\ sup_{n\rightarrow\infty}a_n:=lim_{n\rightarrow\infty}c_n$.}
+
+\SA{}{Sei $(a_n)_{n\geq 1}$ eine beschränkte folge. Dann $lim\ inf_{n\rightarrow\infty}a_n\leq lim\ sup_{n\rightarrow\infty}a_n$.}
+
+\SA{}{Sei $(a_n)_{n\geq 1}$ konvergente Folge reeller Zahlen mit $lim_{n\rightarrow\infty}a_n\geq 0$ und $(b_n)_{n\geq 1}$ eine nach oben beschränkte Folge reeller Zahlen. Dann $lim\ sup_{n\rightarrow\infty}a_nb_n=lim_{n\rightarrow\infty}a_n\cdot lim\ sup_{n\rightarrow\infty}b_n$.}
+
+\SA{2.4.2 Cauchy Kriterium}{$(a_n)_{n\geq 1}$ konvergiert $\Leftrightarrow ((a_n)_{n\geq 1}$ ist beschränkt$)\ \land $ $(lim\ inf_{n\rightarrow\infty}a_n=lim\ sup_{n\rightarrow\infty}a_n)$(L2.4.1)
+
+$\Leftrightarrow\ (a_n)_{n\geq 1}$ ist Cauchy-Folge $\Leftrightarrow\ \forall\varepsilon >0\ \exists N\geq 1: |a_n-a_m|<\varepsilon\ \forall n,m\geq N$.}
+
+\DEF{Abgeschlossenes Intervall}{Eine Teilmenge $I\subseteq\mathbb{R}$ der Form:
+
+(1) $a,b\in\mathbb{R},a\leq b: [a,b]$,
+
+(2) $a\in\mathbb{R}: [a,+\infty)$,
+
+(3) $a\in\mathbb{R}: (-\infty,a]$,
+
+(4) $(-\infty,+\infty)=\mathbb{R}$.
+
+Wir definieren die Länge $\mathcal{L}(I)$ als (1) $\mathcal{L}(I)=b-a$ und (2),(3),(4) $\mathcal{L}(I)=+\infty$.}
+
+\NOTE{}{$I\subseteq\mathbb{R}$ ist beschränkte Teilmenge von $\mathbb{R} \Leftrightarrow$ $\mathcal{L}(I)<+\infty$.}
+
+\NOTE{2.5.2}{$I\subseteq\mathbb{R}$ ist abgeschlossen $\Leftrightarrow\ \forall$ konvergente Folgen $(a_n)_{n\geq 1}, a_n\subseteq I$ gilt $lim_{n\rightarrow\infty}a_n\in I$.}
+
+\NOTE{2.5.3}{Seien $I=[a,b],J=[c,d]$ mit $a\leq b, c\leq d,a,b,c,d\in\mathbb{R}$. Dann $I\subseteq J \Leftrightarrow c\leq a \land b\leq d \Rightarrow \mathcal{L}(I)=b-a\leq d-c = \mathcal{L}(J)$.}
+
+\DEF{Monoton fallende Folge von Teilmengen}{Eine monoton fallende Folge von Teilmengen von $\mathbb{R}$ ist eine Folge $(X_n)_{n\geq 1},X_n\subseteq\mathbb{R}$ mit $X_1\supseteq X_2\supseteq ... \supseteq X_n \supseteq X_{n+1} \supseteq ...$ .}
+
+\SA{2.5.5 Cauchy-Cantor (Intervallschachtelung)}{Sei $I_1\supseteq I_2\supseteq ... \supseteq I_n \supseteq I_{n+1} \supseteq ...$ eine Folge abgeschlossener Intervalle mit $\mathcal{L}(I_1)<+\infty$ und $\forall i\in\mathbb{N}: I_i\not = \emptyset$. Dann $\bigcap_{n\geq 1} I_n\not = \emptyset$. Falls zudem $lim_{n\rightarrow\infty}\mathcal{L}(I_n)=0$ gilt $|\bigcap_{n\leq 1}I_n|=1$.}
+
+
+\DEF{Teilfolge}{Eine Teilfolge einer Folge $(a_n)_{n\geq 1}$ ist eine Folge $(b_n)_{n\geq 1}$ wobei $b_n=a_{l(n)}$ und $l:\mathbb{N}^*\rightarrow\mathbb{N}^*:l(n)<l(n+1)\ \forall n\geq 1$.}
+
+\SA{2.5.9 Bolzano-Weierstrass}{Jede beschränkte Folge besitzt eine konvergente Teilfolge.}
+
+\NOTE{2.5.10}{Sei $(a_n)_{n\geq 1}$ beschränkt. Dann gilt für jede konvergente Teilfolge $(b_n)_{n\geq 1}: lim\ inf_{n\rightarrow\infty}a_n\leq lim_{n\rightarrow\infty}b_n \leq lim\ sup_{n\rightarrow\infty}a_n$.}
+
+\mysubsection{Folgen in $\mathbb{R}^d$ und $\mathbb{C}$}
+Eine Folge in $\mathbb{R}^d$ ist eine Abbildung $a:\mathbb{N}^*\rightarrow\mathbb{R}^d$. Wir schreiben $a_n$ statt $a_n$ und bezeichnen die Folge mit $(a_n)_{n\geq 1}$.
+
+\DEF{Konvergenz}{Sei $||\cdot||$ die euklidische Norm auf $\mathbb{R}^d$. $(a_n)_{n\geq 1}\in\mathbb{R}^d$ ist konvergent $\Leftrightarrow\ \exists a\in\mathbb{R}^d:\forall\varepsilon > 0\ \exists N\geq 1: ||a_n-a||<\varepsilon\ \forall n\geq \mathbb{N}$. Falls solch ein $a$ existiert, ist es eindeutig bestimmt durch $lim_{n\rightarrow\infty}a_n=a$.}
+
+\SA{2.6.3}{Sei $a_n=(a_{n,1},...,a_{n,d})$ die Koordinaten von $a_n$. Sei $b=(b_1,...,b_d)$. Folgende Aussagen sind äquivalent:
+
+(1) $lim_{n\rightarrow\infty}a_n=b$
+
+(2) $lim_{n\rightarrow\infty}a_{n,j}=b_j\ \forall 1\leq j \leq d$.}
+
+\DEF{Häufungspunkt}{Sei $(a_n)_{n\geq 1}$. $c\in\mathbb{R}$ ist Häufungspunkt von $(a_n)_{n\geq 1} \Leftrightarrow \exists$ Teilfolge von $(a_n)_{n\geq 1}$, die gegen $c$ konvergiert. Beispiele:
+
+(1) $a_n=(-1)^n+\frac{1}{n}$. Häufungspunkte sind: $\pm 1$.
+
+(2) $a:\mathbb{N}^*\rightarrow [0,1]\cap\mathbb{Q}$ surjektiv hat beliebig viele Häufungspunkte, weil jede rationale Zahl w.z.B. $\frac{1}{4}=\frac{2}{8}=\frac{3}{12}=...$ kommt unendlich oft vor in $(a_n)_{n\geq 1}$.}
+
+\SA{2.6.6}{(1) $(a_n)_{n\geq 1}$ konvergiert $\Leftrightarrow$ $(a_n)_{n\geq 1}$ ist eine Cauchy-Folge $\Leftrightarrow\ \forall\varepsilon > 0\ \exists N\geq 1: ||a_n-a_m|| < \varepsilon\ \forall n,m\geq N$.
+
+(2) Jede beschränkte Folge hat eine konvergente Teilfolge.}
+
+\mysubsection{Reihen}
+\DEF{Reihe}{Sei $(a_n)_{n\geq 1}$ eine Folge in $\mathbb{R}$ oder $\mathbb{C}$. Dann ist $\sum_{k=1}^{\infty}a_k$ eine Reihe.}
+
+\DEF{Folge der Partialsummen}{Sei $(a_n)_{n\geq 1}$. Dann ist die Folge der Partialsummen definiert als $S_n=\sum_{k=1}^{n}a_k$.}
+
+\DEF{Konvergenz}{Die Reihe $\sum_{k=1}^{\infty}a_k$ ist konverget, falls die Folge $(S_n)_{n\geq 1}$ der Partialsummen konvergiert. Dann $\sum_{k=1}^{\infty}a_k:=lim_{n\rightarrow\infty}S_n$.}
+
+\SA{2.7.4}{Seien $\sum_{n=1}^\infty a_k, \sum_{n=1}^\infty b_k$ konvergent, sowie $\alpha \in\mathbb{C}$. 
+
+(1) Dann ist $\sum_{n=1}^\infty (a_k + b_k)$ konvergent und $\sum_{n=1}^\infty (a_k + b_k)=(\sum_{n=1}^\infty a_k)+(\sum_{n=1}^\infty b_k)$.
+
+(2) Dann ist $\sum_{k=1}^\infty \alpha\cdot a_k$ konvergent und $\sum_{n=1}^\infty \alpha\cdot a_k = \alpha\cdot\sum_{n=1}^\infty a_k$.}
+
+\SA{2.7.5 Cauchy Kriterium}{Die Reihe $\sum_{k=1}^\infty a_k$ ist konvergent $\Leftrightarrow\ \forall\varepsilon > 0,\exists N\geq 1: |\sum_{k=n}^ma_k|<\varepsilon\ \forall m\geq n \geq N$.}
+
+\SA{2.7.6}{Sei $\sum_{k=1}^\infty$ eine Reihe mit $a_k\geq 0\ \forall k\in\mathbb{N}^*$. $\sum_{k=1}^\infty a_k$ konvergiert $\Leftrightarrow (S_n)_{n\geq 1},S_n=\sum_{k=1}^na_k$ ist nach oben beschränkt.}
+
+\COR{2.7.7 Vergleichssatz}{Seien $\sum_{k=1}^\infty a_k, \sum_{k=1}^\infty b_k$ mit $0\leq a_k \leq b_k\ \forall k\geq 1$. Dann 
+
+(1) $\sum_{k=1}^\infty b_k$ konvergent $\Rightarrow \sum_{k=1}^\infty a_k$ konvergent. 
+
+(2) $\sum_{k=1}^\infty a_k$ divergent $\Rightarrow \sum_{k=1}^\infty b_k$ divergent.}
+
+\DEF{Absolute Konvergenz}{$\sum_{k=1}^{\infty}a_k$ ist absolut konvergent $\Leftrightarrow \sum_{k=1}^{\infty}|a_k|$ konvergiert.}
+
+\DEF{Bedingte Konvergenz}{$\sum_{k=1}^{\infty}a_k$ ist bedingt konvergent $\Leftrightarrow \sum_{k=1}^{\infty}a_k$ ist konvergent aber nicht absolut konvergent.}
+
+\SA{2.7.10}{Eine absolut konvergente Reihe $\sum_{k=1}^{\infty}a_k$ ist auch konvergent und es gilt: $|\sum_{k=1}^{\infty}a_k|\leq\sum_{k=1}^{\infty}|a_k|$. Umgekehrt gilt dies jedoch nicht. Beispiel: $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{1}{k}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+...$ konvergiert, ist aber nicht absolut konvergent.}
+
+\SA{2.7.12 Leibniz}{Sei $(a_n)_{n\geq 1}$ monoton fallend mit $a_n\geq 0\ \forall n\geq 1,lim_{n\rightarrow\infty}a_n=0$. Dann konvergiert $S:=\sum_{k=1}^{\infty}(-1)^{k+1}a_k$ und es gilt $a_1-a_2\leq S \leq a_1$.}
+
+\DEF{Umordnung}{Eine Reihe $\sum_{n=1}^{\infty}a_n'$ ist eine Umordnung von $\sum_{n=1}^{\infty}a_n \Leftrightarrow\ \exists $ Bijektion $\phi:\mathbb{N}^*\rightarrow\mathbb{N}^*:a_n'=a_{\phi(n)}$. Umordnungen von bedingt konvergenten Reihen können andere Werte haben als die Ausgangsreihe.}
+
+\NOTE{2.7.15}{Aus Riemann folgt, dass es überabzählbar viele Bijektionen von $\mathbb{N}^*$ gibt.}
+
+\SA{2.7.16 Dirichlet 1837}{$\sum_{n=1}^{\infty}a_n$ konvergiert absult $\Rightarrow$ jede Umordnung der Reihe konvergiert und hat den selben Grenzwert.}
+
+\SA{2.7.17 Quotientenkriterium}{Sei $(a_n)_{n\geq 1}$ mit $a_n\not = 0\ \forall n\geq 1$.
+
+(1) $lim\ sup_{n\rightarrow\infty}\frac{|a_{n+1}|}{|a_n|}<1 \Rightarrow \sum_{n=1}^{\infty}a_n$ konvergiert absolut.
+
+(2) $lim\ inf_{n\rightarrow\infty}\frac{|a_{n+1}|}{|a_n|}>1 \Rightarrow \sum_{n=1}^{\infty}a_n$ divergiert.
+
+(2)* $\exists N\in\mathbb{N}:\forall n\geq N:\frac{|a_{n+1}|}{|a_n|}\geq 1\Rightarrow \sum_{n=1}^{\infty}a_n$ divergiert.}
+
+\SA{2.7.20 Wurzelkriterium}{Sei $(a_n)_{n\geq 1}$.
+
+(1) $lim\ sup_{n\rightarrow\infty}\sqrt[n]{|a_n|}<1 \Rightarrow \sum_{n=1}^{\infty}a_n$ konvergiert absolut.
+
+(2) $lim\ sup_{n\rightarrow\infty}\sqrt[n]{|a_n|}>1 \Rightarrow \sum_{n=1}^{\infty}a_n$ und $\sum_{n=1}^{\infty}|a_n|$ divergieren.}
+
+\DEF{Geometrische Reihe}{Sei $q\in\mathbb{C},|q|<1$. Dann $\sum_{k=0}^{\infty}q^k=\frac{1}{1-q}$.}
+
+\DEF{Harmonische Reihe}{Die Reihe $\sum_{n=1}^\infty\frac{1}{n}$ divergiert.}
+
+\DEF{Exponentialreihe}{Die Reihe $exp(z):=\sum_{n=0}^{\infty}\frac{z^n}{n!}=1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+...$ konvergiert absolut.}
+
+\DEF{Potenzreihe}{Sei $(c_n)_{n\geq 0}$ in $\mathbb{R}$ oder $\mathbb{C}$. Falls $lim\ sup_{n\rightarrow\infty}\sqrt[n]{|c_n|}$ existiert, definieren wir $\rho=\begin{cases}
+    +\infty & \text{if $lim\ sup_{n\rightarrow\infty}\sqrt[n]{|c_n|}=0$}\\
+    \frac{1}{lim\ sup_{n\rightarrow\infty}\sqrt[n]{|c_n|}} & \text{if $lim\ sup_{n\rightarrow\infty}\sqrt[n]{|c_n|}>0$}
+\end{cases}$
+
+Die Potenzreihe $\sum_{n=0}^{\infty}c_nz^k$ konvergiert absolut $\forall\ |z|<\rho$ und divergiert $\forall\ |z|>\rho$. Auf dem Konvergenzradius $|z|=\rho$ kann alles passieren.}
+
+\DEF{Zeta Funktion}{Sei $s>1$ und $\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}$. $\zeta(s)$ konvergiert.}
+
+\mysubsection{Doppelfolgen und Doppelreihen}
+Gegeben eine Doppelfolge $(a_{ij})_{i,j\geq 0}$. Dann können $\sum_{i=0}^{\infty}(\sum_{j=0}^{\infty}a_{ij})=S_0+S_1+S_2+...$ und $\sum_{j=0}^{\infty}(\sum_{i=0}^{\infty}a_{ij})=b_0+b_1+b_2+...$ beide konvergent sein mit verschiedenen Grenzwerten. Wir nennen $\sum_{i,j\geq 0}a_{ij}$ eine Doppelreihe.
+
+\DEF{Lineare Anordnung}{$\sum_{k=0}^{\infty}b_k$ ist eine lineare Anordnung der Doppelreihe $\sum_{i,j\geq 0}a_{ij} \Leftrightarrow\ \exists$ Bijektion $\sigma:\mathbb{N}\rightarrow\mathbb{N}\times\mathbb{N}:b_k=a_{\sigma(k)}$.}
+
+\DEF{Cauchy 1821 (Doppelreihensatz)}{Angenommen $\exists\ B\geq 0:\sum_{i=0}^m\sum_{j=0}^m|a_{ij}|\leq B\ \forall m\geq 0$. Dann konvergieren die folgenden Reihen absolut:
+$S_i:=\sum_{j=0}^{\infty}a_{ij}\ \forall i\geq 0$ und $U_j:=\sum_{i=0}^{\infty}a_{ij}\ \forall j\geq 0$ sowie $\sum_{i=0}^{\infty}S_i$ und $\sum_{j=0}^{\infty}U_i$ und es gilt: $\sum_{i=0}^{\infty}S_i=\sum_{j=0}^{\infty}U_j$. 
+
+Zudem konvergiert jede lineare Anordnung der Doppelreihe absolut, mit selbem Grenzwert.}
+
+\DEF{Cauchy Produkt}{Das Cauchy Produkt der Reihen $\sum_{i=0}^{\infty}a_i,\sum_{j=0}^{\infty}b_j$ ist die Reihe $\sum_{n=0}^{\infty}(\sum_{j=0}^na_{n-j}b_j)=a_0b_0+(a_0b_1+a_1b_0)+(a_0b_2+a_1b_1+a_2b_0)+...$}
+
+\SA{2.7.26}{Die Reihen $\sum_{i=0}^{\infty}a_i,\sum_{j=0}^{\infty}b_j$ konvergieren absolut $\Leftrightarrow$ ihr Cauchy Produkt konvergiert und es gilt: $\sum_{n=0}^{\infty}(\sum_{j=0}^na_{n-j}b_j)=(\sum_{i=0}^{\infty}a_i)(\sum_{j=0}^{\infty}b_j)$.}
+
+\SA{2.7.28}{Sei $f_n:\mathbb{N}\rightarrow\mathbb{R}$ eine Folge. Wir nehmen an, dass:
+
+(1) $\forall j\in\mathbb{N},\exists\ f(j):=lim_{n\rightarrow\infty}f_n(j)$
+
+(2) $\exists g:\mathbb{N}\rightarrow [0,\infty)$ s.d.
+\begin{enumerate}
+    \item[2.1] $|f_n(j)|\leq g(j)\ \forall j\geq 0,\ \forall n\geq 0$.
+    \item[2.2] $\sum_{j=0}^{\infty}g(j)$ konvergiert.
+\end{enumerate}
+
+Dann $\sum_{j=0}^{\infty}f(j)=lim_{n\rightarrow\infty}\sum_{j=0}^{\infty}f_n(j)$.
+}
+
+\COR{2.7.29}{$\forall z\in\mathbb{C}$ konvergiert die Folge $((1+\frac{z}{n})^n)_{n\geq 1}$ und $lim_{n\rightarrow\infty}(1+\frac{z}{n})^n=exp(z)$.}
+
+
+

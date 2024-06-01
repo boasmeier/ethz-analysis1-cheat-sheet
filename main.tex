@@ -1,0 +1,37 @@
+% Define document class. Options: article, report, book, ...
+\documentclass{article}
+
+% Include preamble.tex
+\input{preamble}
+
+\begin{document}
+
+% Set fontsize to scriptsize (7px)
+\scriptsize
+
+\begin{center}
+     \Large{\textbf{BSc. Computer Science - Analysis I - Boas Meier}}
+\end{center}
+
+\begin{multicols}{4}
+\setlength{\premulticols}{0.5pt}
+\setlength{\postmulticols}{0.5pt}
+\setlength{\multicolsep}{0.5pt}
+\setlength{\columnsep}{0.2pt}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\intextsep}{0pt}
+
+\begin{flushleft}
+
+\input{sections/reelle_zahlen.tex}
+\input{sections/komplexe_zahlen.tex}
+\input{sections/folgen_und_reihen.tex}
+\input{sections/stetige_funktionen.tex}
+\input{sections/differenzierbare_funktionen.tex}
+\input{sections/riemann_integral.tex}
+\input{sections/other.tex}
+
+
+\end{flushleft}
+\end{multicols}
+\end{document}
