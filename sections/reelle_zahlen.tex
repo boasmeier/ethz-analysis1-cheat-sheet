@@ -9,10 +9,10 @@
 
 \mysubsection{Körper der Reellen Zahlen}
 \DEF{Operationen}{
-\begin{itemize}
-    \item[] Addition: $\mathbb{R}\times\mathbb{R}\stackrel{+}{\rightarrow}\mathbb{R}$
-    \item[] Multiplikation: $\mathbb{R}\times\mathbb{R}\stackrel{\cdot}{\rightarrow}\mathbb{R}$
-\end{itemize}}
+
+Addition: $+:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R},(x,y)\mapsto x+y$.
+
+Multiplikation: $\cdot:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R},(x,y)\mapsto x\cdot y$.}
 
 \SA{1.1.2 Ordnungsrelation}{$\leq$ für welche gilt $\mathbb{R}$ ist ein kommutativer, angeordneter Körper, der ordnungsvollständig ist.}
 
@@ -74,49 +74,48 @@ $\mathbb{Q}$ ist nicht ordnungsvollständig, weil es in $\mathbb{Q}$ Folgen gibt
 
 \SA{1.1.8}{$\forall t\geq 0,t\in\mathbb{R}$ hat $x^2=t$ eine Lösung in $\mathbb{R}$. Sie wird mit $\sqrt{t}$ bezeichnet.}
 
-\DEF{Absolutbetrag}{Seien $x,y\in\mathbb{R}$. \begin{itemize}
-    \item[(i)] $max\{x,y\}=\begin{cases}
+\DEF{Absolutbetrag}{Seien $x,y\in\mathbb{R}$. \begin{enumerate}
+    \item $max\{x,y\}=\begin{cases}
         x & \text{if $y\leq x$} \\
         y & \text{if $x\leq y$} 
     \end{cases}$
-    \item[(ii)] $min\{x,y\}=\begin{cases}
+    \item $min\{x,y\}=\begin{cases}
         x & \text{if $x\leq y$} \\
         y & \text{if $y\leq x$} 
     \end{cases}$
-    \item[(iii)] $x\in\mathbb{R}: |x|=max\{x,-x\}$.
-\end{itemize}}
+    \item $x\in\mathbb{R}: |x|=max\{x,-x\}$.
+\end{enumerate}}
 
 \SA{1.1.10 Rechenregeln für Absolutbetrag}{
 \begin{enumerate}
-    \item $\forall x\in\mathbb{R}: |x|\geq 0$
-    \item $\forall x,y\in\mathbb{R}:|xy|=|x||y|$
-    \item $\forall x,y\in\mathbb{R}:|x\pm y|\leq |x|+|y|$ (Dreiecksungl.)
-    \item $\forall x,y\in\mathbb{R}:|x\pm y|\geq ||x|-|y||$
+    \item $|x|\geq 0\ \forall x\in\mathbb{R}$
+    \item $|xy|=|x||y|\ \forall x,y\in\mathbb{R}$
+    \item $|x\pm y|\leq |x|+|y|\ \forall x,y\in\mathbb{R}$ (Dreiecksungl.)
+    \item $|x\pm y|\geq ||x|-|y||\ \forall x,y\in\mathbb{R}$
 \end{enumerate}}
 
-\SA{1.1.11 Young'sche Ungleichung}{$\forall\varepsilon>0,\forall x,y\in\mathbb{R}: 2|xy|\leq \varepsilon x^2 + \frac{1}{\varepsilon}y^2$.}
+\SA{1.1.11 Young'sche Ungleichung}{$$\forall\varepsilon>0,\forall x,y\in\mathbb{R}: 2|xy|\leq \varepsilon x^2 + \frac{1}{\varepsilon}y^2$$}
 
-\DEF{Unendlich}{$\forall x\in\mathbb{R}: -\infty < x < +\infty \Leftrightarrow -\infty \not\in\mathbb{R} \land +\infty\not\in\mathbb{R}$.}
+\DEF{Unendlich}{$$\forall x\in\mathbb{R}: -\infty < x < +\infty \Leftrightarrow -\infty \not\in\mathbb{R} \land +\infty\not\in\mathbb{R}$$}
 
 \DEF{Intervall}{Ein Intervall ist eine Teilmenge von $\mathbb{R}$ von der Form:
-
-(1) für $a\leq b \in \mathbb{R}:$
-\begin{align*}
-    [a,b]&:=\{x\in\mathbb{R}|a\leq x \leq b\},\\
-    [a,b)=[a,b[&:=\{x\in\mathbb{R}|a\leq x < b\},\\
-    (a,b]=]a,b]&:=\{x\in\mathbb{R}|a< x \leq b\},\\
-    (a,b)=]a,b[&:=\{x\in\mathbb{R}|a< x < b\}
-\end{align*}
-
-(2) für $a\in\mathbb{R}:$
-\begin{align*}
-    [a,+\infty)=[a,+\infty[&:=\{x\in\mathbb{R}|a\leq x\},\\
-    ]a,+\infty)=]a,+\infty[&:=\{x\in\mathbb{R}|a < x\},\\
-    (-\infty,a]=]-\infty,a]&:=\{x\in\mathbb{R}|a \geq x\},\\
-    (-\infty,a)=]-\infty,a[&:=\{x\in\mathbb{R}|a > x\}
-\end{align*}
-
-(3) $(-\infty,+\infty)=]-\infty,+\infty[ = \mathbb{R}$}
+\begin{enumerate}
+    \item für $a\leq b \in \mathbb{R}:$
+    \begin{align*}
+        [a,b]&:=\{x\in\mathbb{R}|a\leq x \leq b\},\\
+        [a,b)=[a,b[&:=\{x\in\mathbb{R}|a\leq x < b\},\\
+        (a,b]=]a,b]&:=\{x\in\mathbb{R}|a< x \leq b\},\\
+        (a,b)=]a,b[&:=\{x\in\mathbb{R}|a< x < b\}
+    \end{align*}
+    \item für $a\in\mathbb{R}:$
+    \begin{align*}
+        [a,+\infty)=[a,+\infty[&:=\{x\in\mathbb{R}|a\leq x\},\\
+        ]a,+\infty)=]a,+\infty[&:=\{x\in\mathbb{R}|a < x\},\\
+        (-\infty,a]=]-\infty,a]&:=\{x\in\mathbb{R}|a \geq x\},\\
+        (-\infty,a)=]-\infty,a[&:=\{x\in\mathbb{R}|a > x\}
+    \end{align*}
+    \item $(-\infty,+\infty)=]-\infty,+\infty[ = \mathbb{R}$
+\end{enumerate}}
 
 \DEF{Intervall Begrifflichkeiten}{\begin{itemize}
     \item Abgeschlossen, kompakt: $[a,b]$
@@ -135,20 +134,22 @@ $\mathbb{Q}$ ist nicht ordnungsvollständig, weil es in $\mathbb{Q}$ Folgen gibt
 
 \DEF{Minimum}{Sei $A\subseteq\mathbb{R}$. $m\in\mathbb{R}$ ist ein Minimum von $A \Leftrightarrow (m\in A) \land (m$ ist untere Schranke von $A)$.}
 
-\DEF{Supremum}{Sei $A\subseteq\mathbb{R}, A\not = \emptyset$. Sei $A$ nach oben beschränkt. Dann $\exists$ kleinste obere Schranke von $A$: $c:=sup(A)$ genannt Supremum und $[sup(A),+\infty)$ ist die Menge aller oberen Schranken von $A$. $A$ nicht nach oben beschränkt $\Leftrightarrow sup(A) = +\infty$. $sup(\emptyset)=+\infty$.}
+\DEF{Supremum}{Sei $A\subseteq\mathbb{R}, A\not = \emptyset$. Sei $A$ nach oben beschränkt. Dann $\exists$ kleinste obere Schranke von $A$: $c:=sup(A)$ genannt Supremum und $[sup(A),\infty)$ ist die Menge aller oberen Schranken von $A$. $A$ nicht nach oben beschränkt $\Leftrightarrow sup(A) = \infty$. $sup(\emptyset)=\infty$.}
 
 \DEF{Infimum}{Sei $A\subseteq\mathbb{R}, A\not = \emptyset$. Sei $A$ nach unten beschränkt. Dann $\exists$ grösste untere Schranke von $A$: $d:=inf(A)$ gennant Infimum und $(-\infty,inf(A)]$ ist die Menge aller unteren Schranken von $A$. $A$ nicht nach unten beschränkt $\Leftrightarrow inf(A)=-\infty$. $inf(\emptyset)=+\infty$.}
 
 \COR{1.1.16}{Seien $A\subseteq B\subseteq \mathbb{R}$. Dann
-\begin{itemize}
-    \item[(i)] $B$ nach oben beschränkt $\Rightarrow sup(A)\leq sup(B)$.
-    \item[(ii)] $B$ nach unten beschränkt $\Rightarrow inf(B)\leq inf(A)$.
-\end{itemize}}
+\begin{enumerate}
+    \item $B$ nach oben beschränkt $\Rightarrow sup(A)\leq sup(B)$.
+    \item $B$ nach unten beschränkt $\Rightarrow inf(B)\leq inf(A)$.
+\end{enumerate}}
 
-\DEF{Abzählbarkeit/Kardinalität}{(1) Seien $X,Y$ zwei Mengen. Dann $X,Y$ gleichmächtig $\Leftrightarrow \exists$ Bijektion $f:X\rightarrow Y$.
-
-(2) Sei $X$ eine Menge. Dann $X$ ist endlich $\Leftrightarrow (X=\emptyset) \lor (\exists n \in\mathbb{N}: f: X \rightarrow \{1,2,3,...,n\})$.
-
-(3) Sei $X$ eine Menge. $X$ ist abzählbar (abzählbar unendlich) $\Leftrightarrow (X$ ist endlich$) \lor (X$ ist gleichmächtig wie $\mathbb{N})$.}
+\DEF{Abzählbarkeit/Kardinalität}{\begin{enumerate}
+    \item Seien $X,Y$ zwei Mengen. Dann $X,Y$ gleichmächtig $\Leftrightarrow \exists$ Bijektion $f:X\rightarrow Y$.
+    \item Sei $X$ eine Menge. Dann $X$ ist endlich $\Leftrightarrow (X=\emptyset) \lor (\exists n \in\mathbb{N}: f: X \rightarrow \{1,2,3,...,n\})$.
+    \item Sei $X$ eine Menge. $X$ ist abzählbar (abzählbar unendlich) $\Leftrightarrow (X$ ist endlich$) \lor (X$ ist gleichmächtig wie $\mathbb{N})$.
+\end{enumerate}}
 
 \SA{1.1.20 Cantor}{$\mathbb{R}$ ist nicht abzählbar bzw. überabzählbar.}
+
+\NOTE{}{$\lambda^2+1=0$ hat in $\mathbb{R}$ keine Lösung.}
